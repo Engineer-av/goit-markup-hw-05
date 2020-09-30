@@ -102,3 +102,17 @@ dist
 
 # TernJS port file
 .tern-port
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+images/.DS_Store
+.DS_Store
+.DS_Store
+images/.DS_Store
