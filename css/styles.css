@@ -692,3 +692,7 @@ img {
   border-radius: 50%;
   background-color: var(--primary-background-color);
 }
+
+.icon-close-btn {
+  fill: #000000;
+}
