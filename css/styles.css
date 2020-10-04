@@ -616,8 +616,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--acent-color);
-  pointer-events: none;
+  background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
   transition: transform var(--animation-duration) var(--timing-function);
