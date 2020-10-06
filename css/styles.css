@@ -10,7 +10,7 @@
   --icon-color: #afb1b8;
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
+  --animation-duration: 5000ms;
 }
 
 *,
@@ -121,14 +121,17 @@ img {
   color: inherit;
 }
 .navigation-list-link,
-.contact-list-item {
+.header-mail-link,
+.header-tel-link {
   transition: color var(--animation-duration) var(--timing-function);
 }
 
 .navigation-list-link:hover,
 .navigation-list-link:focus,
-.contact-list-item:hover,
-.contact-list-item:focus {
+.header-mail-link:hover,
+.header-mail-link:focus,
+.header-tel-link:hover,
+.header-tel-link:focus {
   color: var(--acent-color);
 }
 
@@ -355,27 +358,28 @@ img {
   display: flex;
 }
 .social-item {
-  border-radius: 50%;
   color: var(--icon-color);
-  transition: color var(--animation-duration) var(--timing-function),
-    border-radius var(--animation-duration) var(--timing-function),
-    background-color var(--animation-duration) var(--timing-function);
 }
-.social-item:hover,
-.social-item:focus {
-  color: var(--text-color-on-acent-background);
-  background-color: var(--acent-color);
-  border-radius: 50%;
-}
+
 .social-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
   color: inherit;
-}
 
+  transition: color var(--animation-duration) var(--timing-function),
+    border-radius var(--animation-duration) var(--timing-function),
+    background-color var(--animation-duration) var(--timing-function);
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--text-color-on-acent-background);
+  background-color: var(--acent-color);
+  border-radius: 50%;
+}
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -401,18 +405,7 @@ img {
 .clients-item {
   margin-right: 30px;
   color: var(--icon-color);
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
-  transition: color var(--animation-duration) var(--timing-function),
-    border var(--animation-duration) var(--timing-function);
 }
-
-.clients-item:hover,
-.clients-item:focus {
-  color: var(--acent-color);
-  border: 1px solid var(--acent-color);
-}
-
 .clients-link {
   display: inline-flex;
   width: 170px;
@@ -420,6 +413,15 @@ img {
   justify-content: center;
   align-items: center;
   color: inherit;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  transition: color var(--animation-duration) var(--timing-function),
+    border var(--animation-duration) var(--timing-function);
+}
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--acent-color);
+  border: 1px solid var(--acent-color);
 }
 
 .clients-icon {
@@ -577,10 +579,13 @@ img {
   background-color: var(--secondary-background-color);
 
   transition: color var(--animation-duration) var(--timing-function),
-    background-color var(--animation-duration) var(--timing-function);
+    background-color var(--animation-duration) var(--timing-function),
+    box-shadow var(--animation-duration) var(--timing-function);
 }
 .filter-btn:hover,
 .filter-btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   color: var(--text-color-on-acent-background);
   background-color: var(--acent-color);
